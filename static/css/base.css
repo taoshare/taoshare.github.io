@@ -1,0 +1,87 @@
+@charset"utf-8";
+html, body, div, header, nav, head, span, object, iframe, section, aside, article, figure, h1, h2, h3, h4, img, ol, ul, dl, p {
+    margin:0;
+    padding:0;
+    border:0;
+    background:transparent
+}
+ul {
+    list-style:none
+}
+li {
+    list-style-type:none
+}
+h1, h2, h3, h4 {
+    line-height:24px;
+    font-weight:normal;
+    color:#666;
+    text-rendering:optimizelegibility
+}
+h1 {
+    font-size:24px
+}
+h2 {
+    font-size:18px
+}
+h3 {
+    font-size:16px
+}
+h4 {
+    font-size:15px
+}
+article, aside, dialog, footer, header, section, footer, nav, figure, menu, hgroup {
+    display:block
+}
+a {
+    color:#666;
+}
+a:hover, a:active {
+    outline:0;
+    color:#f00
+}
+a, a:hover {
+    text-decoration:none
+}
+img {
+    height:auto;
+    display:block;
+    max-width:100%;
+    opacity:1 !important;
+}
+.left {
+    float:left
+}
+.right {
+    float:right
+}
+
+.red {
+    color: red;
+}
+.blue {
+    color: blue;
+}
+.yellow {
+    color: yellow;
+}
+.green {
+    color: green;
+}
+
+
+
+body * {
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box
+}
+a, input, textarea, b, button, i, span, figure img, img.avatar, ul.children, .post-social>div, .gallery_popup, .popup, .swiper-button, .sub-menu, .widget_shopping_cart_content, *:before, *:after {
+    -webkit-transition:ease-in-out .5s;
+    transition:ease-in-out .5s
+}
+body {
+    font:12px Arial, "微软雅黑";
+    overflow-x:hidden;
+    overflow-y:scroll;
+    line-height:24px;
+    color:#666
+}
