@@ -270,7 +270,7 @@
 
 @media screen and (max-width:767px) {
     .container {
-        margin: 8% auto;
+        margin: 10% auto;
         max-width: 450px;
     }
     /* phone */
