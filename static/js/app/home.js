@@ -24,7 +24,10 @@ require(["jquery", "jquery.poshytip", "diandian", "bootstrap" ], function ($) {
         }
         player.index++
     }
-    playing(music);
+    setTimeout(function () {
+        playing(music);
+    }, 5000);
+
 
 
     setInterval(function () {
