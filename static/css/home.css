@@ -40,18 +40,18 @@
     }
     25% {
         -webkit-transform: rotate(90deg);
-        opacity: .75;
-        filter: alpha(opacity = 75);
+        opacity: .6;
+        filter: alpha(opacity = 60);
     }
     50% {
         -webkit-transform: rotate(180deg);
-        opacity: .5;
-        filter: alpha(opacity = 50);
+        opacity: .2;
+        filter: alpha(opacity = 20);
     }
     75% {
         -webkit-transform: rotate(270deg);
-        opacity: .75;
-        filter: alpha(opacity = 75);
+        opacity: .6;
+        filter: alpha(opacity = 60);
     }
     100% {
         -webkit-transform: rotate(360deg);
@@ -264,7 +264,7 @@
     height: 15%;
     margin-top: 10%;
     word-spacing: 16px;
-    font: 24px normal Arial, "微软雅黑";
+    font: 20px normal Arial, "微软雅黑";
     font-family: STXingkai;
 }
 
@@ -305,7 +305,7 @@
         height: 15%;
         margin-top: 8%;
         word-spacing: 8px;
-        font: 16px normal Arial, "微软雅黑";
+        font: 14px normal Arial, "微软雅黑";
     }
 }
 .mask {
