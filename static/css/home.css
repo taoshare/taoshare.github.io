@@ -271,7 +271,7 @@
 
 @media screen and (max-width:767px) {
     .container {
-        margin: 10% auto;
+        margin: 80px auto 0 auto;
         max-width: 450px;
     }
     .slogan {
