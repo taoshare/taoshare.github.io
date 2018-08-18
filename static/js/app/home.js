@@ -1,4 +1,19 @@
 require(["jquery", "jquery.poshytip", "diandian", "bootstrap" ], function ($) {
+    //调整位置
+    $(window).load(function(){
+        justifyWindow();
+    });
+    $(window).resize(function() {
+        justifyWindow()
+    });
+    function justifyWindow() {
+        var h = $(window).height();
+        if(h > 600) {
+            $(".container").css("margin-top",parseInt(((h-600)/2))+"px");
+        }
+    }
+
+
     //菜单提示框
     $('[data-toggle="tooltip"]').tooltip({
         delay: 10,

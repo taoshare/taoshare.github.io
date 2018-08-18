@@ -61,11 +61,23 @@ img {
 .blue {
     color: blue;
 }
+.blue1 {
+    color: #8888FF;
+}
 .yellow {
     color: yellow;
 }
+.yellow1 {
+    color: #FFFF80;
+}
+.orange {
+    color: orange;
+}
 .green {
     color: green;
+}
+.green1 {
+    color: #00C800;
 }
 
 
