@@ -270,13 +270,8 @@
 
 @media screen and (max-width:767px) {
     .container {
-        margin: 10% auto;
+        margin: 80px auto 0 auto;
         max-width: 450px;
-    }
-    /* phone */
-    .header {
-        height: 150px;
-        line-height: 120px;
     }
     .slogan {
         padding: 15px 0;
