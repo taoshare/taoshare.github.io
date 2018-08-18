@@ -93,19 +93,17 @@
     position: relative;
     text-align: center;
 }
-@keyframes slogan-body {
+@keyframes slogan-body1 {
     0% {
         transform: translateX(-100%);
-        visibility: hidden;
     }
     100% {
         transform: translateX(0);
-        visibility: visible;
     }
 }
 @keyframes slogan-p {
     0% {
-        transform: translateX(100%);
+        transform: translateX(-100%);
         opacity: 0;
     }
     100% {
@@ -114,6 +112,11 @@
     }
 }
 .slogan .slogan-body {
+    /*-webkit-transition: transform 2s ease-in-out 100ms;*/
+    /*-moz-transition: transform 2s ease-in-out 100ms;*/
+    /*-o-transition: transform 2s ease-in-out 100ms;*/
+    /*transition: transform 2s ease-in-out 100ms;*/
+
     transition-property: transform;
     transition-duration: 2s;
     transition-timing-function: ease-in-out;
@@ -138,8 +141,10 @@
     -moz-animation: slogan-body 5s ease;
     -webkit-animation: slogan-body 5s ease;
     -o-animation: slogan-body 5s ease;
+    background-color: transparent;
     display: inline-block;
     overflow: hidden;
+    width: 100%;
 }
 .slogan .slogan-body p {
     animation: slogan-p 5s ease;

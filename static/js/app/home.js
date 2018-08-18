@@ -1,7 +1,17 @@
-require(["jquery", "jquery.poshytip", "diandian", "bootstrap" ], function ($) {
-    //调整位置
+require(['jquery', 'poshytip', 'diandian', 'bootstrap', 'async!BMap' ], function ($) {
+
     $(window).load(function(){
-        justifyWindow();
+        //调整位置
+        //justifyWindow();
+
+        //定位
+        getCurrentCity();
+
+        //播放器
+        //var music = document.getElementById('audio');
+        var music = new Audio();
+        music.volume = 0.3;
+        playing(music);
     });
     $(window).resize(function() {
         justifyWindow()
@@ -12,19 +22,28 @@ require(["jquery", "jquery.poshytip", "diandian", "bootstrap" ], function ($) {
             $(".container").css("margin-top",parseInt(((h-600)/2))+"px");
         }
     }
-
+    //地理位置定位
+    function getCurrentCity() {
+        var myCity = new BMap.LocalCity();
+        myCity.get(LocationFunction);
+    }
+    function LocationFunction(result){
+        var cityName = result.name;
+        $('#current-city').text(cityName);
+        //alert("当前定位城市:"+JSON.stringify(result));
+    }
 
     //菜单提示框
     $('[data-toggle="tooltip"]').tooltip({
         delay: 10,
     });
 
+    //mp3 播放器
     var mp3List = [
         {name : 'My Love - Westlife', url : 'upload/music/my-love.mp3'},
-        {name : 'Echo - All of me', url : 'upload/music/All-of-me.mp3'},
         {name : '郁可唯 - 时间煮雨', url : 'upload/music/shijianzhuyu.mp3'},
+        {name : 'Echo - All of me', url : 'upload/music/All-of-me.mp3'},
     ]
-    var music = document.getElementById('audio');
     var player = {
         index : 0,
         duration : 0,
@@ -39,28 +58,14 @@ require(["jquery", "jquery.poshytip", "diandian", "bootstrap" ], function ($) {
         }
         player.index++
     }
-    setTimeout(function () {
-        playing(music);
-    }, 5000);
-
-
-
     setInterval(function () {
         if(player.index == mp3List.length) {
             player.index = 0;
         }
-        if (player.current >= player.duration) {
+        if (player.current > player.duration - 1) {
             playing(music);
-            /*m.setAttribute("src", mp3List[player.index].url);
-            m.currentTime = 0;
-            m.play();
-            m.oncanplay = function () {
-                player.duration = parseInt(m.duration);
-            }
-            player.index++*/
         }
         player.current = music.currentTime;
     },1000);
-
 
 });
