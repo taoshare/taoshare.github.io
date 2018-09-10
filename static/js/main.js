@@ -3,23 +3,25 @@
  *
  */
 require.config({
-    urlArgs: "v="+(new Date()).getTime(),
+    urlArgs: 'v='+(new Date()).getTime(),
     //基路径，建议自己写的js代码位置。已有的库写好之后不会变动
-    baseUrl: "/static/js",
+    baseUrl: '/static/js',
     paths: {
         common      : 'common',
         util        : 'util',
         jquery      : ['http://libs.baidu.com/jquery/2.0.3/jquery', 'jquery.min'],  //多种选择
         bootstrap   : ['../plugins/bootstrap/js/bootstrap.min'],
+        swiper      : ['https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min', '../plugins/swiper/js/swiper.min'],
         poshytip    : 'jquery.poshytip/jquery.poshytip.min',
         diandian    : 'other/canvas.diandian.bg',
-        css         : "require/css.min",
+        ejs         : 'other/ejs.min',
+        css         : 'require/css.min',
         async       : 'requirejs-plugins/src/async',
         BMap        : 'http://api.map.baidu.com/api?v=2.0&ak=Piq8pCLp2Y6i9IDzzzeLZHnaN4N7HZjp',
     },
     shim: {
-        "common": {
-            // exports: "test",  //单个函数使用
+        'common': {
+            // exports: 'test',  //单个函数使用
             init: function () {
                 return {
                     modal: modal,
@@ -27,20 +29,25 @@ require.config({
                 }
             }
         },
-        "jquery":{
-            exports: "$"
+        'jquery':{
+            exports: '$'
         },
-        "bootstrap": {
-            deps: ["jquery"]
+
+        'bootstrap': {
+            deps: ['jquery']
         },
-        "underscore" : {
-            exports : "_"
+        'swiper': {
+            deps: ['jquery', 'css!https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.css'],
+            exports: 'Swiper'
         },
-        "poshytip" : {
-            deps : ["jquery", "css!../js/jquery.poshytip/tip-twitter/tip-twitter.css"]
+        'underscore' : {
+            exports : '_'
         },
-        "diandian" : {
-            deps : ["jquery"]
+        'poshytip' : {
+            deps : ['jquery', 'css!../js/jquery.poshytip/tip-twitter/tip-twitter.css']
+        },
+        'diandian' : {
+            deps : ['jquery']
         },
         'BMap': {
             deps: ['jquery'],
@@ -50,6 +57,6 @@ require.config({
 });
 
 
-// require(["jquery", "angular"], function ($, angular) {
-//     $("body").css({"backgroundColor": "red"});
+// require(['jquery', 'angular'], function ($, angular) {
+//     $('body').css({'backgroundColor': 'red'});
 // })

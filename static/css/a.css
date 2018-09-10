@@ -1,9 +1,0 @@
-.hello {
-    filter:alpha(opacity=50); /* IE */
-    -moz-opacity:0.5; /* 老版Mozilla */
-    -khtml-opacity:0.5; /* 老版Safari */
-    opacity: 0.5; /* 支持opacity的浏览器*/
-    -webkit-animation: avatar-do 2s linear infinite;
-    animation: avatar-do 2s linear infinite;
-}
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImEuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0kseUJBQVksQ0FBQSxRQUFBO0lBQ1osaUJBQUEsQ0FBQSxlQUFBO0lBQ0EsbUJBREEsQ0FBQSxjQUFBO0lBQ0gsYUFBQSxDQUFBLGtCQUFBO0lBRUcsZ0RBQWdEO0lBQ2hELHdDQUF3QztDQUMzQyIsImZpbGUiOiJhLmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5oZWxsbyB7XHJcbiAgICBvcGFjaXR5OiAuNTtcclxuICAgIGFuaW1hdGlvbjogYXZhdGFyLWRvIDJzIGxpbmVhciBpbmZpbml0ZTtcclxufVxyXG4iXX0= */
